@@ -3,71 +3,138 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@0,100..900;1,100..900&family=Poppins:wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Normalize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+      integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
     <title>Bissnes promonion</title>
   </head>
 
   <body>
-    <header>
+    <!-- #region Header -->
+    <header class="main-header">
       <!-- (nav>(a>img)+ul>li*4>a)+ul>li*2>button -->
+      <div class="container header">
+        <nav class="navigation">
+          <a class="nav-logo" href="./index.html"
+            ><img
+              class="nav-logo-img"
+              src="./images/logo.png"
+              alt="logo"
+            />Product</a
+          >
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a class="nav-list-link current" href="./index.html">Product</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-list-link" href="./pricing.html">Pricing</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-list-link" href="./customers.html">Customers</a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-list-link" href="./resources.html">Resources</a>
+            </li>
+          </ul>
+        </nav>
 
-      <nav>
-        <a href="./index.html"
-          ><img src="./images/logo.png" alt="logo" />Product</a
-        >
-        <ul>
-          <li><a href="./index.html">Product</a></li>
-          <li><a href="./pricing.html">Pricing</a></li>
-          <li><a href="./customers.html">Customers</a></li>
-          <li><a href="./resources.html">Resources</a></li>
+        <ul class="header-list-btn">
+          <li class="header-item-btn">
+            <button type="button" class="header-btn sing-in">Sign In</button>
+          </li>
+          <li class="header-item-btn">
+            <button type="button" class="header-btn sing-up">Sign Up</button>
+          </li>
         </ul>
-      </nav>
-
-      <ul>
-        <li><button type="button">Sign In</button></li>
-        <li><button type="button">Sign Up</button></li>
-      </ul>
+      </div>
     </header>
+    <!-- #endregion -->
 
     <main>
-      <section>
-        <h1>Work at the speed of thought</h1>
-        <p>
-          Tools, tutorials, design and innovation experts, all in one place! The
-          most intuitive way to imagine your next user experience.
-        </p>
-        <ul>
-          <li>
-            <button type="button">Get started</button>
-          </li>
-          <li>
-            <button type="button">Watch the Video</button>
-          </li>
-        </ul>
-        <img src="./images/hero.png" alt="peopels and gatels" width="540" />
+      <section class="hero">
+        <div class="container">
+          <div class="hero-wrap">
+            <h1 class="hero-title">Work at the speed of thought</h1>
+            <p class="hero-title-descr">
+              Tools, tutorials, design and innovation experts, all in one place!
+              The most intuitive way to imagine your next user experience.
+            </p>
+            <ul class="hero-list-btn">
+              <li class="hero-list-item">
+                <button class="hero-btn get-started" type="button">
+                  Get started
+                </button>
+              </li>
+              <li class="hero-list-item">
+                <button class="hero-btn watch-btn" type="button">
+                  Watch the Video
+                </button>
+              </li>
+            </ul>
+          </div>
+          <img
+            class="hero-img"
+            src="./images/hero.png"
+            alt="peopels and gatels"
+            width="540"
+          />
+        </div>
       </section>
 
-      <section>
+      <section class="specifically">
         <!-- h2+(ul>li*4>h3+p)+button -->
-        <h2>Product was Built Specifically for You</h2>
-        <ul>
-          <li>
-            <h3>First click tests</h3>
-            <p>While most people enjoy casino gambling,</p>
-          </li>
-          <li>
-            <h3>Design surveys</h3>
-            <p>Sports betting, lottery and bingo playing for the fun</p>
-          </li>
-          <li>
-            <h3>Preference tests</h3>
-            <p>The Myspace page defines the individual.</p>
-          </li>
-          <li>
-            <h3>Five second tests</h3>
-            <p>Personal choices and the overall personality of the person.</p>
-          </li>
-        </ul>
-        <button type="button">Sing up now</button>
+        <div class="container">
+          <h2 class="specifically-title">
+            Product was Built Specifically for You
+          </h2>
+          <ul class="specifically-list">
+            <li class="specifically-item">
+              <div class="spec-wrap green"></div>
+              <h3 class="specifically-item-title">First click tests</h3>
+              <p class="specifically-item-descr">
+                While most people enjoy casino gambling,
+              </p>
+            </li>
+            <li class="specifically-item">
+              <div class="spec-wrap blue"></div>
+              <h3 class="specifically-item-title">Design surveys</h3>
+              <p>Sports betting, lottery and bingo playing for the fun</p>
+            </li>
+            <li class="specifically-item">
+              <div class="spec-wrap fiolet"></div>
+              <h3 class="specifically-item-title">Preference tests</h3>
+              <p class="specifically-item-descr">
+                The Myspace page defines the individual.
+              </p>
+            </li>
+            <li class="specifically-item">
+              <div class="spec-wrap red"></div>
+              <h3 specifically-item-title>Five second tests</h3>
+              <p class="specifically-item-descr">
+                Personal choices and the overall personality of the person.
+              </p>
+            </li>
+          </ul>
+          <button class="specifically-btn" type="button">Sing up now</button>
+        </div>
       </section>
 
       <section>
