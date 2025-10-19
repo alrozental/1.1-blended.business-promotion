@@ -448,7 +448,14 @@ img {
 /* #endregion */
 
 /* #region Feedback */
+.rating-star {
+  fill: #f3cd03;
+}
 /* #endregion */
 
 /* #region Promo */
 /* #endregion */
+
+.footer-soc-icon {
+  fill: #02897a;
+}
