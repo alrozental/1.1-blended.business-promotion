@@ -86,7 +86,11 @@
             </p>
             <ul class="hero-list-btn">
               <li class="hero-list-item">
-                <button class="hero-btn get-started" type="button">
+                <button
+                  class="hero-btn get-started"
+                  type="button"
+                  data-modal-open="process"
+                >
                   Get started
                 </button>
               </li>
@@ -352,9 +356,7 @@
               <p class="process-item-text">I can help marketing strategy</p>
             </li>
           </ul>
-          <button class="process-btn" type="button" data-modal-open="process">
-            Contact our expert
-          </button>
+          <button class="process-btn" type="button">Contact our expert</button>
         </div>
       </section>
 
@@ -806,17 +808,16 @@
 
     <!-- Process Modal Window -->
     <div class="backdrop" data-modal="process">
+      <button
+        class="process-modal-close"
+        type="button"
+        data-modal-close="process"
+      >
+        <svg class="process-modal-close-icon" width="28" height="2">
+          <use href="./images/icon.svg#icon-close"></use>
+        </svg>
+      </button>
       <div class="process-modal">
-        <button
-          class="process-modal-close"
-          type="button"
-          data-modal-close="process"
-        >
-          <svg class="process-modal-close-icon" width="28" height="28">
-            <use href="./images/icon.svg#icon-close"></use>
-          </svg>
-        </button>
-
         <div class="process-modal-info">
           <p class="process-modal-caption">Contact Us</p>
           <p class="process-modal-text">
@@ -855,7 +856,6 @@
 
         <div class="process-modal-wrap">
           <p class="process-modal-form-caption">Send a message</p>
-
           <form
             class="process-modal-form"
             name="review"
@@ -973,7 +973,73 @@
 
     <!-- Signup Modal Window -->
     <div class="backdrop" data-modal="signup">
-      <div class="process-modal"></div>
+      <div class="signup-modal font-montserrat">
+        <button
+          class="signup-modal-close"
+          type="button"
+          data-modal-close="signup"
+        >
+          <!-- <svg class="login-modal-close-icon" width="16" height="16">
+            <use href="./images/icon.svg#icon-close"></use>
+          </svg> -->
+          x
+        </button>
+        <p class="signup-modal-title">Sign Up</p>
+        <form
+          class="signup-modal-form"
+          name="review"
+          autocomplete="off"
+          method="post"
+        >
+          <div class="signup-box">
+            <label
+              class="signup-modal-form-label visually-hidden"
+              for="signup-email"
+              >Email</label
+            >
+            <input
+              class="signup-modal-form-input"
+              type="email"
+              id="signup-email"
+              name="signup-email"
+              placeholder="Email"
+              required
+            />
+            <label
+              class="signup-modal-form-label visually-hidden"
+              for="signup-password"
+              >Password</label
+            >
+            <input
+              class="signup-modal-form-input"
+              type="password"
+              id="signup-password"
+              name="signup-password"
+              placeholder="Create password"
+              required
+            />
+            <label
+              class="signup-modal-form-label visually-hidden"
+              for="signup-password-confirm"
+              >Password</label
+            >
+            <input
+              class="signup-modal-form-input"
+              type="password"
+              id="signup-password-confirm"
+              name="signup-password-confirm"
+              placeholder="Confirm password"
+              required
+            />
+          </div>
+          <button class="signup-modal-form-btn" type="submit">Sign Up</button>
+
+          <p class="signup-modal-login">
+            Your don&#39;t have an account?
+            <a class="signup-modal-login-link" href="">Sign In</a>
+          </p>
+        </form>
+      </div>
     </div>
 
     <script src="./js/modal.js"></script>
