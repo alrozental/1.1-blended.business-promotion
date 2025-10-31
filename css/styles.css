@@ -218,12 +218,13 @@ img {
 .hero .container {
   display: flex;
   align-items: center;
-  gap: 26px;
+  justify-content: space-between;
+  gap: 39px;
 }
 .hero-wrap {
 }
 .hero-title {
-  max-width: 385px;
+  max-width: 375px;
   font-weight: 700;
   font-size: 40px;
   line-height: 1.5;
@@ -232,6 +233,7 @@ img {
 }
 
 .hero-title-descr {
+  max-width: 460px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.55556;
@@ -319,6 +321,7 @@ img {
   background-color: #027a6b;
 }
 .hero-img {
+  width: 610px;
 }
 
 /* #endregion */
@@ -434,12 +437,16 @@ img {
 }
 
 .management-wrap {
+  max-width: 486px;
 }
 
 .wrap-title {
-  max-width: 304px;
+  max-width: 305px;
   margin-bottom: 25px;
 
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   font-weight: 700;
   font-size: 32px;
 }
@@ -450,9 +457,7 @@ img {
 }
 
 .wrap-text {
-  max-width: 430px;
   margin-bottom: 30px;
-
   line-height: 1.6;
 }
 
@@ -470,13 +475,9 @@ img {
 }
 
 .list-item-text {
-  max-width: 430px;
   line-height: 1.6;
 }
 
-.support-item-text {
-  max-width: 370px;
-}
 .wrap-img {
   width: 540px;
   height: 500px;
@@ -630,7 +631,7 @@ img {
   font-size: 34px;
 }
 .strategies-text {
-  max-width: 400px;
+  max-width: 465px;
   margin-bottom: 40px;
 
   font-weight: 500;
@@ -823,7 +824,7 @@ img {
   text-align: center;
 }
 .feedback-text {
-  max-width: 430px;
+  max-width: 470px;
   margin: 0 auto 40px;
   font-weight: 500;
   font-size: 16px;
@@ -841,7 +842,7 @@ img {
 .clients-card {
   width: 327px;
   min-height: 240px;
-  padding: 30px 35px;
+  padding: 28px 26px;
 
   display: flex;
   flex-direction: column;
@@ -911,7 +912,7 @@ img {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 60px;
 
   border-radius: 32px;
   background-color: #02897a;
@@ -965,7 +966,7 @@ img {
   transform: scale(1);
 }
 .promo-img {
-  width: 351px;
+  width: 410px;
 }
 
 /* #endregion */
