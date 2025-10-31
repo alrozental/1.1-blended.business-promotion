@@ -1472,9 +1472,17 @@ img {
   border-radius: 50%;
   border: 2px solid #02897a;
   background-color: transparent;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.login-modal-close:hover {
+  background-color: #02897a;
 }
 .login-modal-close-icon {
-  stroke: currentColor;
+  stroke: #fff;
+  /* Не могу поменять цвет SVG, из-за этого не меняется Hover Эфект */
+}
+.login-modal-close-icon:hover {
 }
 .login-modal-title {
   margin-bottom: 20px;
@@ -1505,12 +1513,20 @@ img {
 .login-modal-form-input {
   width: 100%;
   padding: 8px 15px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.37;
   letter-spacing: 0.01em;
+
   color: #22343d;
+  border: 1px solid #afafaf;
+  border-radius: 4px;
   outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.login-modal-form-input:focus {
+  border: 1px solid #02897a;
 }
 .login-modal-form-input::placeholder {
   font-weight: 400;
@@ -1518,33 +1534,62 @@ img {
   line-height: 1.187;
   letter-spacing: 0.01em;
   color: #afafaf;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.login-modal-form-input:focus::placeholder {
+  color: #02897984;
 }
 .login-modal-forgot {
   margin-bottom: 26px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.75;
   letter-spacing: 0.01em;
-  color: #035b8158;
+
+  color: #afafaf;
+}
+.login-modal-forgot:hover,
+.login-modal-forgot:focus,
+.login-modal-forgot:active {
+  color: #01544eb0;
 }
 .login-modal-form-btn {
   width: 100%;
-  height: 43px;
+  height: 45px;
   margin-bottom: 8px;
 
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.01em;
+
   color: #fff;
   border-radius: 4px;
   background-color: #02897a;
+  transform: scale(1);
+  transition: transform 0.15s ease,
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.login-modal-form-btn:hover {
+  background-color: #01a08d;
+}
+.login-modal-form-btn:active {
+  background-color: #027a6b;
+  box-shadow: inset 0 2px 4px rgba(0, 4, 4, 0.287);
+  transform: scale(0.96);
+}
+.login-modal-form-btn:focus {
+  background-color: #027a6b;
+}
+
 .login-modal-signup {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.75;
   letter-spacing: 0.01em;
-  color: #035b8158;
+  color: #afafaf;
 }
 .login-modal-signup-link {
   text-decoration: underline;
@@ -1552,35 +1597,14 @@ img {
 
   color: #03817da4;
 }
+.login-modal-signup-link:hover,
+.login-modal-signup-link:focus,
+.login-modal-signup-link:active {
+  color: #01544eb0;
+}
 /* #endregion */
 
 /* #region SignUn MW */
-.signup-modal {
-  width: 417px;
-  padding: 50px 40px 30px;
-  margin: 0 auto;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 15px;
-  background-color: #fff;
-}
-.signup-modal-title {
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 1.5;
-  color: #02897a;
-}
 .signup-modal-form {
   width: 100%;
 
@@ -1596,50 +1620,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 15px;
-}
-.signup-modal-form-label {
-}
-.signup-modal-form-input {
-  width: 100%;
-  padding: 8px 15px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.37;
-  letter-spacing: 0.01em;
-  color: #22343d;
-  outline: none;
-}
-.signup-modal-form-input::placeholder {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.187;
-  letter-spacing: 0.01em;
-  color: #afafaf;
-}
-.signup-modal-form-btn {
-  width: 100%;
-  height: 43px;
-  margin-bottom: 8px;
-
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0.01em;
-  color: #fff;
-  border-radius: 4px;
-  background-color: #02897a;
-}
-.signup-modal-login {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.75;
-  letter-spacing: 0.01em;
-  color: #035b8158;
-}
-.signup-modal-login-link {
-  text-decoration: underline;
-  text-decoration-skip-ink: none;
-
-  color: #03817da4;
 }
 
 /* #endregion */
