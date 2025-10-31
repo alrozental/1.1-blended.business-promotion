@@ -1125,7 +1125,7 @@ img {
   background-color: transparent;
   outline: transparent;
 
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-form-input:hover,
 .footer-form-input:active,
@@ -1260,14 +1260,12 @@ img {
   position: fixed;
   z-index: 10000;
 
-  color: #02897a;
+  /* color: #02897a; */
   border-radius: 50%;
   border: 2px solid #02897a;
   background-color: #fff;
 }
-
 .getstarted-modal-close-icon {
-  stroke: currentColor;
 }
 .getstarted-modal-info {
   margin-bottom: 70px;
@@ -1309,6 +1307,15 @@ img {
 
   border-radius: 20px;
   border: 1px solid #ddd;
+
+  transform: scale(1);
+  transition: transform 0.25s ease, outline 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.getstarted-modal-wrap:hover,
+.getstarted-modal-wrap:active,
+.getstarted-modal-wrap:focus {
+  outline: 1px solid #02897a;
 }
 .getstarted-modal-form-caption {
   margin-bottom: 45px;
@@ -1344,6 +1351,11 @@ img {
   border-radius: 39px;
   border: 1px solid #e8e8e8;
   background-color: #f5f5f5;
+
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.getstarted-modal-form-input:focus {
+  outline: 1px solid #02897a;
 }
 .getstarted-modal-form-input::placeholder {
   font-family: "ProximaNova", sans-serif;
@@ -1352,6 +1364,11 @@ img {
   line-height: 1.06;
   letter-spacing: 0.01em;
   color: #22343d;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.getstarted-modal-form-input:focus::placeholder {
+  color: #02897984;
 }
 .getstarted-modal-form-message {
   width: 100%;
@@ -1370,6 +1387,10 @@ img {
   outline: none;
   border: 1px solid #e8e8e8;
   background-color: #f5f5f5;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.getstarted-modal-form-message:focus {
+  outline: 1px solid #02897a;
 }
 .getstarted-modal-form-message::placeholder {
   font-family: "ProximaNova", sans-serif;
@@ -1378,6 +1399,11 @@ img {
   line-height: 1.06;
   letter-spacing: 0.01em;
   color: #22343d;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.getstarted-modal-form-message:focus::placeholder {
+  color: #02897984;
 }
 .getstarted-modal-form-btn {
   width: 145px;
@@ -1390,6 +1416,22 @@ img {
   color: #fff;
   border-radius: 35px;
   background-color: #02897a;
+
+  transform: scale(1);
+  transition: transform 0.15s ease, color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.getstarted-modal-form-btn:hover {
+  background-color: #01a08d;
+}
+.getstarted-modal-form-btn:active {
+  background-color: #027a6b;
+  box-shadow: inset 0 2px 4px rgba(0, 4, 4, 0.287);
+  transform: scale(0.96);
+}
+.getstarted-modal-form-btn:focus {
+  background-color: #027a6b;
 }
 /* #endregion */
 
