@@ -760,6 +760,8 @@ img {
   line-height: 2.5;
 }
 .card-cost {
+  margin-bottom: 16px;
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -1303,7 +1305,18 @@ img {
   border-radius: 50%;
   border: 2px solid #02897a;
 }
+.getstarted-modal-close:hover,
+.getstarted-modal-close:active,
+.getstarted-modal-close:focus {
+  background-color: #02897a;
+}
 .getstarted-modal-close-icon {
+  stroke: #02897a;
+}
+.getstarted-modal-close-icon:hover,
+.getstarted-modal-close-icon:active,
+.getstarted-modal-close-icon:focus {
+  stroke: #fff;
 }
 .getstarted-modal-info {
   margin-bottom: 70px;
@@ -1323,7 +1336,7 @@ img {
   color: #252b42;
 }
 .getstarted-modal-text {
-  max-width: 300px;
+  max-width: 330px;
   margin-bottom: 35px;
 
   font-weight: 500;
