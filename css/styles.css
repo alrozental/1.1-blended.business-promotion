@@ -1291,8 +1291,8 @@ img {
   padding: 0;
   margin-left: auto;
 
-  top: 70px;
-  right: 399px;
+  top: 19px;
+  right: 29px;
 
   position: fixed;
   z-index: 10000;
@@ -1300,7 +1300,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  color: #02897a;
   background-color: #fff;
   border-radius: 50%;
   border: 2px solid #02897a;
@@ -1308,16 +1308,13 @@ img {
 .getstarted-modal-close:hover,
 .getstarted-modal-close:active,
 .getstarted-modal-close:focus {
+  color: #fff;
   background-color: #02897a;
 }
 .getstarted-modal-close-icon {
-  stroke: #02897a;
+  stroke: currentColor;
 }
-.getstarted-modal-close-icon:hover,
-.getstarted-modal-close-icon:active,
-.getstarted-modal-close-icon:focus {
-  stroke: #fff;
-}
+
 .getstarted-modal-info {
   margin-bottom: 70px;
 
@@ -1530,15 +1527,17 @@ img {
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.login-modal-close:hover {
+
+.login-modal-close-icon {
+  stroke: currentColor;
+}
+.login-modal-close:hover,
+.login-modal-close:active,
+.login-modal-close:focus {
+  color: #fff;
   background-color: #02897a;
 }
-.login-modal-close-icon {
-  stroke: #fff;
-  /* Не могу поменять цвет SVG, из-за этого не меняется Hover Эфект */
-}
-.login-modal-close-icon:hover {
-}
+
 .login-modal-title {
   margin-bottom: 20px;
 
