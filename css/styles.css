@@ -59,6 +59,16 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+input {
+  font-family: inherit;
+}
+
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
 /* #endregion */
 
 /* #region Common */
